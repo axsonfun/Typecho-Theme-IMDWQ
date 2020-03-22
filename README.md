@@ -22,7 +22,7 @@
 
 ### 图片预览地址
 ## 整体外观
-![](https://pic.downk.cc/item/5e63b21e98271cb2b8f778b8.png)
+![](https://api.superbed.cn/item/5e776c815c56091129ee9a7c.png)
 ![](https://pic.downk.cc/item/5e63b21e98271cb2b8f778c1.png)
 ![](https://pic.downk.cc/item/5e63b21e98271cb2b8f778c7.png)
 ![](https://pic.downk.cc/item/5e63b21e98271cb2b8f778d1.png)
