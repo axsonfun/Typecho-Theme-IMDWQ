@@ -6,7 +6,7 @@
 
 ### Github地址：https://github.com/kicomodo/IMDWQ
 
-### 如果你觉得还看不过瘾，那就来我的小窝看看吧：https://www.loli.life
+### 如果你觉得还看不过瘾，那就来我的小窝看看吧：https://loli.life
 
 ## 大更日志 [2.0对比1.0]
 ### 1.重写PC和WAP左侧栏，更自由的设置[sider.php]，尽可能腾出更多空间。
