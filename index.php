@@ -2,8 +2,7 @@
 /**
  * 自用模板不外传
  * @package IMDWQ
- * @author Dorasees
- * @version 2.5
+ * @author Dorasees3.0
  * @link https://www.dorasees.com
  */
  ?>
