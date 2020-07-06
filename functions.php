@@ -20,6 +20,8 @@ function themeConfig($form) {
     $form->addInput($icon);
 	$touxianglian = new Typecho_Widget_Helper_Form_Element_Text('touxianglian', NULL, NULL, _t('头像链'), _t(''));
     $form->addInput($touxianglian);
+    $banquan = new Typecho_Widget_Helper_Form_Element_Text('banquan', NULL, NULL, _t('文章版权'), _t(''));
+    $form->addInput($banquan);
 }
 function themeFields($layout) {
     $toutu = new Typecho_Widget_Helper_Form_Element_Text('toutu', NULL, NULL, _t('文章头图'), _t(''));

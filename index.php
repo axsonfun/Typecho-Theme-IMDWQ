@@ -1,9 +1,11 @@
 <?php
 /**
- * 自用模板不外传
+ * 个人主页式的卡通Typecho模板主题
+ * https://github.com/kicosoda/Typecho-Theme-IMDWQ
  * @package IMDWQ
- * @author Dorasees3.0
- * @link https://www.dorasees.com
+ * @author kicosoda
+ * @version 3.1
+ * @link https://kicosoda.com
  */
  ?>
 <!DOCTYPE html>
@@ -12,11 +14,9 @@
     <meta charset="UTF-8">
     <title><?php $this->options->biaoti(); ?> | <?php $this->options->fubiaoti(); ?></title>
 	<link rel="shortcut icon" href="<?php $this->options->icon(); ?>">
-    <link href="<?php $this->options->themeUrl('css.css'); ?>" rel="stylesheet" type="text/css"/>
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
     <meta name="keywords" content="<?php $this->options->guanjianci(); ?>"/>
     <meta name="description" content="<?php $this->options->miaoshu(); ?>"/>
-    <link href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <?php $this->need('sidebar.php'); ?>
@@ -36,8 +36,9 @@
             <div class="row multi"> 
 <?php while($this->next()): ?>
 <div class="col-12 col-s-6 col-m-6">
-                    <a href="<?php $this->permalink() ?>">
+                    <a href="<?php $this->permalink() ?>" style="overflow:hidden;position:relative;border-radius:1em">
                         <img ks-original="<?php $this->fields->toutu(); ?>">
+                        <time style="bottom:0;left:0;padding:.5em .75em;position:absolute;background:rgba(0,0,0,.5);transition:transform .3s;border-radius:0 1em 0 0;color:#fff"><?php $this->date('Y-m-d'); ?></time>
                     </a>
                 </div>   
 <?php endwhile; ?>

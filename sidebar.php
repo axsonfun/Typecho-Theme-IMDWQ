@@ -7,5 +7,4 @@
 <a href="device.html" ks-tag="right" ks-text="装备"><i class="fa fa-database"></i></a>
 <a href="about.html" ks-tag="right" ks-text="关于"><i class="fa fa-star"></i></a>
 <a href="diary.html" ks-tag="right" ks-text="日记"><i class="fa fa-book"></i></a>
-<a href="search.html" ks-tag="right" ks-text="搜索"><i class="fa fa-star"></i></a>
 </nav></header>
