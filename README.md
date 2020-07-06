@@ -28,12 +28,12 @@
 #### 细节部分
 ![](https://pic.downk.cc/item/5e63b25998271cb2b8f7917c.png)
 ![](https://pic.downk.cc/item/5e63b25998271cb2b8f79182.png)
-![](https://pic.downk.cc/item/5e63b30698271cb2b8f7cd40.png)
+![](https://inews.gtimg.com/newsapp_ls/0/12043377299/0)
 
-### 主题设置教程（推荐前往主站F12复制更快）
+### 设置示例
 #### 侧边栏
-<a href="地址"><i class="FA图标"></i><span>文字</span></a>
+    <a href="地址"><i class="图标"></i><span>文字</span></a>
 #### 底部（可以写备案的，又拍云也行）
-© 日期 <a href="地址">网站名称</a>
+    © 日期 <a href="地址">网站名称</a>
 #### 头像链接
-顾名思义，写个链接
+    顾名思义，写个链接
