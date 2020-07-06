@@ -1,3 +1,4 @@
+![](https://pic.downk.cc/item/5f02b4c414195aa594d9d4d6.png)
 ## Typecho-Theme-IMDWQ
 
 ### 🌟 个人主页式的卡通Typecho模板主题
@@ -10,7 +11,7 @@
 
 ### 图片预览地址
 #### 整体外观
-![](https://api.superbed.cn/item/5e776c815c56091129ee9a7c.png)
+![](https://pic.downk.cc/item/5f02b4b314195aa594d9cbcf.png)
 ![](https://pic.downk.cc/item/5e63b21e98271cb2b8f778c1.png)
 ![](https://pic.downk.cc/item/5e63b21e98271cb2b8f778c7.png)
 ![](https://pic.downk.cc/item/5e63b21e98271cb2b8f778d1.png)
@@ -21,6 +22,9 @@
 ![](https://pic.downk.cc/item/5e63b23b98271cb2b8f78545.png)
 ![](https://pic.downk.cc/item/5e63b23b98271cb2b8f7854c.png)
 ![](https://pic.downk.cc/item/5e63b25998271cb2b8f79175.png)
+#### 深色模式
+![](https://pic.downk.cc/item/5f02b47414195aa594d9a644.png)
+![](https://pic.downk.cc/item/5f02b47414195aa594d9a646.png)
 #### 细节部分
 ![](https://pic.downk.cc/item/5e63b25998271cb2b8f7917c.png)
 ![](https://pic.downk.cc/item/5e63b25998271cb2b8f79182.png)
