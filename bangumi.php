@@ -25,35 +25,124 @@
 <?php
 $array = [1,2];
 foreach ($array as $val){
-$url = "https://space.bilibili.com/ajax/Bangumi/getList?mid=40065341&page=" . $val;
-$content = file_get_contents($url);
+$content = blblget("https://api.bilibili.com/x/space/bangumi/follow/list?type=1&follow_status=0&ps=15&vmid=".$this->options->blblid."&pn=" . $val);
 $content = json_decode($content);
 if($content){
-$content = $content -> data -> result;
+$content = $content -> data -> list;
 foreach($content as $item){
 $image = preg_replace("/http:\/\//", "https://mirror.2890.ltd/", $item -> cover);
+$share_url = "https://bangumi.bilibili.com/anime/". $item -> season_id;
+$arr_str1=explode(" ",$item -> progress);
+if(!empty($arr_str1))
+{
+$str1 = $arr_str1[0];
+}
+for ($i1=0;$i1<strlen($str1);$i1++){
+$s1 = substr($str1,$i1,1);
+if (is_numeric($s1)) {
+$x1 = $x1.$s1;
+}
+}
+if($x1==null){
+$log = "0";
+$x1 ="";
+} 
+else {
+$log = $x1;
+$x1 ="";
+}
+$arr_str=explode(" ",$item -> new_ep -> index_show);
+if(!empty($arr_str))
+{
+$str = $arr_str[0];
+}
+for ($i=0;$i<strlen($str);$i++){
+$s = substr($str,$i,1);
+if (is_numeric($s)) {
+$x=$x.$s;
+}
+}
+if($x==null){
+$all = "0";
+$x = "";
+} 
+else {
+$all = $x;
+$x = "";
+}
 ?>
-<div class="col-6 col-s-4 col-m-4"><a class="bangumi-item" href="<?php echo $item -> share_url ?>" target="_blank" rel="nofollow" style="border-radius:.5em"><img ks-original="<?php echo $image ?>"><h4><?php echo $item -> title ?></h4></a></div>
+<div class="col-6 col-s-4 col-m-4"><a class="bangumi-item" href="<?php echo $share_url ?>" target="_blank" rel="nofollow" style="border-radius:.5em"><img ks-original="<?php echo $image ?>"><h4><?php echo $item -> title ?>
+<div class="bangumi-status">
+<div class="bangumi-status-bar" style="width:<?php echo (($log/$all)*100).'%'; ?>"></div>
+<p><?php echo $log; ?> / <?php echo $all; ?></p>
+</div>
+</h4></a></div>
 <?php } } else{ ?><div class="col-12"><p>追番数据获取失败！</p><ul><li>当前页面正在实时获取哔哩哔哩的追番数据，请确保您能正常访问哔哩哔哩动画哦~</li></ul></div>
 <?php } } unset($bid, $name, $seem, $total, $img, $width); ?>
 </div>
-<section class="paul-music" style="margin-top:3em" id="morebangumi"><div class="music-list"><ul class="clear"><a onclick="openbangumilist()" style="color:#67492e;text-align:center"><li>展开所有番剧</li></a></ul></div></section>
+<section class="paul-music" style="margin-top:3em" id="morebangumi"><div class="music-list"><ul class="clear"><a onclick="openbangumilist()" style="color:#67492e;text-align:center"><li>展开所有番剧</li></a></ul></div></section></div>
 <div id="morebangumilist" class="row" style="padding-top:2em;display:none">
 <?php
-$array = [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+$array = [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27];
 foreach ($array as $val){
-$url = "https://space.bilibili.com/ajax/Bangumi/getList?mid=40065341&page=" . $val;
-$content = file_get_contents($url);
+$content = blblget("https://api.bilibili.com/x/space/bangumi/follow/list?type=1&follow_status=0&ps=15&vmid=".$this->options->blblid."&pn=" . $val);
 $content = json_decode($content);
 if($content){
-$content = $content -> data -> result;
+$content = $content -> data -> list;
 foreach($content as $item){
 $image = preg_replace("/http:\/\//", "https://mirror.2890.ltd/", $item -> cover);
+$share_url = "https://bangumi.bilibili.com/anime/". $item -> season_id;
+$arr_str1=explode(" ",$item -> progress);
+if(!empty($arr_str1))
+{
+$str1 = $arr_str1[0];
+}
+for ($i1=0;$i1<strlen($str1);$i1++){
+$s1 = substr($str1,$i1,1);
+if (is_numeric($s1)) {
+$x1 = $x1.$s1;
+}
+}
+if($x1==null){
+$log = "0";
+$x1 ="";
+} 
+else {
+$log = $x1;
+$x1 ="";
+}
+$arr_str=explode(" ",$item -> new_ep -> index_show);
+if(!empty($arr_str))
+{
+$str = $arr_str[0];
+}
+for ($i=0;$i<strlen($str);$i++){
+$s = substr($str,$i,1);
+if (is_numeric($s)) {
+$x=$x.$s;
+}
+}
+if($x==null){
+$all = "0";
+$x = "";
+} 
+else {
+$all = $x;
+$x = "";
+}
 ?>
-<div class="col-6 col-s-4 col-m-4"><a class="bangumi-item" href="<?php echo $item -> share_url ?>" target="_blank" rel="nofollow" style="border-radius:.5em"><img ks-original="<?php echo $image ?>"><h4><?php echo $item -> title ?></h4></a></div>
-<?php } } else{ ?><div class="col-12"><p>追番数据获取失败！</p><ul><li>当前页面正在实时获取哔哩哔哩的追番数据，请确保您能正常访问哔哩哔哩动画哦~</li></ul></div>
-<?php } } unset($bid, $name, $seem, $total, $img, $width); ?>
+<div class="col-6 col-s-4 col-m-4"><a class="bangumi-item" href="<?php echo $share_url ?>" target="_blank" rel="nofollow" style="border-radius:.5em"><img ks-original="<?php echo $image ?>"><h4><?php echo $item -> title ?>
+<div class="bangumi-status">
+<div class="bangumi-status-bar" style="width:<?php echo (($log/$all)*100).'%'; ?>"></div>
+<p><?php  if($all == "0"){
+       echo "暂未开播";
+   }else{
+       echo $log." / ".$all;
+   } ?></p>
 </div>
+</h4></a></div>
+<?php } } ?>
+<?php } unset($bid, $name, $seem, $total, $img, $width); ?>
 </section>
 </section>
 <?php $this->need('footer.php'); ?>

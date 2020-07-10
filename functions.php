@@ -22,8 +22,15 @@ function themeConfig($form) {
     $form->addInput($touxianglian);
     $banquan = new Typecho_Widget_Helper_Form_Element_Text('banquan', NULL, NULL, _t('文章版权'), _t(''));
     $form->addInput($banquan);
+    $blblid = new Typecho_Widget_Helper_Form_Element_Text('blblid', NULL, NULL, _t('哔哩哔哩ID'), _t(''));
+    $form->addInput($blblid);
+    $blblcookie = new Typecho_Widget_Helper_Form_Element_Text('blblcookie', NULL, NULL, _t('哔哩哔哩Cookie'), _t(''));
+    $form->addInput($blblcookie);
+    
 }
 function themeFields($layout) {
+    $toutu2 = new Typecho_Widget_Helper_Form_Element_Text('toutu2', NULL, NULL, _t('首页头图'), _t(''));
+    $layout->addItem($toutu2);
     $toutu = new Typecho_Widget_Helper_Form_Element_Text('toutu', NULL, NULL, _t('文章头图'), _t(''));
     $layout->addItem($toutu);
 	$guanjianci = new Typecho_Widget_Helper_Form_Element_Text('guanjianci', NULL, NULL, _t('关键词'), _t(''));
@@ -31,13 +38,22 @@ function themeFields($layout) {
 	$miaoshu = new Typecho_Widget_Helper_Form_Element_Text('miaoshu', NULL, NULL, _t('描述'), _t(''));
     $layout->addItem($miaoshu);
 }
-function upyuntoken($picurl){
-echo"@".$picurl."-";
-$etime = time() + 600;
-$key = 'cMgWDqIcfPVx0Xa51FtgjEmsBCI3h3vL';
-$path = $picurl;
-$_upt = substr( md5($key.'&'.$etime.'&'.$path), 12, 8 ) . $etime;
-$endurl = "https://cdn.loli.life".$path."?_upt=".$_upt;
-echo $endurl;
-}
+function blblget($url) {
+    $options = Typecho_Widget::widget('Widget_Options');
+        $curl = curl_init();
+        $header = array(
+            'Accept: */*',
+            'Origin: https://space.bilibili.com',
+            'Sec-Fetch-Mode: cors'
+        );
+        curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
+        curl_setopt($curl, CURLOPT_REFERER, 'https://space.bilibili.com/bangumi');
+        curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36");
+        curl_setopt($curl, CURLOPT_COOKIE, $options->blblcookie);
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        $tmpInfo = curl_exec($curl);
+        curl_close($curl);
+        return $tmpInfo;
+    }
 ?>
