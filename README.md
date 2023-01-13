@@ -1,4 +1,9 @@
 ![](https://inews.gtimg.com/newsapp_ls/0/12043365770/0)
+##止步！
+
+###模板大更新，未妥善更新文档，仅供参考，有待日后有空重写。
+
+
 ## Typecho-Theme-IMDWQ
 
 ### 🌟 个人主页式的卡通Typecho模板主题
@@ -10,30 +15,27 @@
 #### 如果你觉得还看不过瘾，那就来我的小窝看看吧：https://kicosoda.com
 
 ### 图片预览地址
+
 #### 整体外观
+
 ![](https://inews.gtimg.com/newsapp_ls/0/12043364769/0)
-![](https://pic.downk.cc/item/5e63b21e98271cb2b8f778c1.png)
-![](https://pic.downk.cc/item/5e63b21e98271cb2b8f778c7.png)
-![](https://pic.downk.cc/item/5e63b21e98271cb2b8f778d1.png)
-![](https://pic.downk.cc/item/5e63b21e98271cb2b8f778d8.png)
-![](https://pic.downk.cc/item/5e63b23b98271cb2b8f78532.png)
-![](https://pic.downk.cc/item/5e63b23b98271cb2b8f78539.png)
-![](https://pic.downk.cc/item/5e63b23b98271cb2b8f7853f.png)
-![](https://pic.downk.cc/item/5e63b23b98271cb2b8f78545.png)
-![](https://pic.downk.cc/item/5e63b23b98271cb2b8f7854c.png)
-![](https://pic.downk.cc/item/5e63b25998271cb2b8f79175.png)
+
 #### 深色模式
+
 ![](https://inews.gtimg.com/newsapp_ls/0/12043361021/0)
-![](https://pic.downk.cc/item/5f02b47414195aa594d9a646.png)
+
 #### 细节部分
-![](https://pic.downk.cc/item/5e63b25998271cb2b8f7917c.png)
-![](https://pic.downk.cc/item/5e63b25998271cb2b8f79182.png)
+
 ![](https://inews.gtimg.com/newsapp_ls/0/12043377299/0)
 
 ### 设置示例
+
 #### 侧边栏
     <a href="地址"><i class="图标"></i><span>文字</span></a>
+	
 #### 底部（可以写备案的，又拍云也行）
+
     © 日期 <a href="地址">网站名称</a>
 #### 头像链接
+
     顾名思义，写个链接

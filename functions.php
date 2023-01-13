@@ -1,24 +1,24 @@
 <?php
 function themeConfig($form) {
-	$touxiang = new Typecho_Widget_Helper_Form_Element_Text('touxiang', NULL, NULL, _t('头像'), _t(''));
+	$touxiang = new Typecho_Widget_Helper_Form_Element_Text('touxiang', NULL, NULL, _t('主页头像'), _t(''));
     $form->addInput($touxiang);
-	$name = new Typecho_Widget_Helper_Form_Element_Text('name', NULL, NULL, _t('昵称'), _t(''));
+	$name = new Typecho_Widget_Helper_Form_Element_Text('name', NULL, NULL, _t('主页昵称'), _t(''));
     $form->addInput($name);
-    $jieshao = new Typecho_Widget_Helper_Form_Element_Text('jieshao', NULL, NULL, _t('介绍'), _t(''));
+    $jieshao = new Typecho_Widget_Helper_Form_Element_Text('jieshao', NULL, NULL, _t('主页介绍'), _t(''));
     $form->addInput($jieshao);
-	$footer = new Typecho_Widget_Helper_Form_Element_Text('footer', NULL, NULL, _t('底部'), _t(''));
-    $form->addInput($footer);
-    $biaoti = new Typecho_Widget_Helper_Form_Element_Text('biaoti', NULL, NULL, _t('标题'), _t(''));
+    $biaoti = new Typecho_Widget_Helper_Form_Element_Text('biaoti', NULL, NULL, _t('网站标题'), _t(''));
     $form->addInput($biaoti);
-	$fubiaoti = new Typecho_Widget_Helper_Form_Element_Text('fubiaoti', NULL, NULL, _t('副标题'), _t(''));
+    $fubiaoti = new Typecho_Widget_Helper_Form_Element_Text('fubiaoti', NULL, NULL, _t('网站副标题'), _t(''));
     $form->addInput($fubiaoti);
-	$guanjianci = new Typecho_Widget_Helper_Form_Element_Text('guanjianci', NULL, NULL, _t('关键词'), _t(''));
+    $footer = new Typecho_Widget_Helper_Form_Element_Text('footer', NULL, NULL, _t('底部文字'), _t(''));
+    $form->addInput($footer);
+	$guanjianci = new Typecho_Widget_Helper_Form_Element_Text('guanjianci', NULL, NULL, _t('SEO关键词'), _t(''));
     $form->addInput($guanjianci);
-	$miaoshu = new Typecho_Widget_Helper_Form_Element_Text('miaoshu', NULL, NULL, _t('描述'), _t(''));
+	$miaoshu = new Typecho_Widget_Helper_Form_Element_Text('miaoshu', NULL, NULL, _t('SEO描述'), _t(''));
     $form->addInput($miaoshu);
-	$icon = new Typecho_Widget_Helper_Form_Element_Text('icon', NULL, NULL, _t('图标'), _t(''));
+	$icon = new Typecho_Widget_Helper_Form_Element_Text('icon', NULL, NULL, _t('网站图标'), _t(''));
     $form->addInput($icon);
-	$touxianglian = new Typecho_Widget_Helper_Form_Element_Text('touxianglian', NULL, NULL, _t('头像链'), _t(''));
+	$touxianglian = new Typecho_Widget_Helper_Form_Element_Text('touxianglian', NULL, NULL, _t('头像链接'), _t(''));
     $form->addInput($touxianglian);
     $banquan = new Typecho_Widget_Helper_Form_Element_Text('banquan', NULL, NULL, _t('文章版权'), _t(''));
     $form->addInput($banquan);
@@ -26,17 +26,22 @@ function themeConfig($form) {
     $form->addInput($blblid);
     $blblcookie = new Typecho_Widget_Helper_Form_Element_Text('blblcookie', NULL, NULL, _t('哔哩哔哩Cookie'), _t(''));
     $form->addInput($blblcookie);
-    
+    $caidan = new Typecho_Widget_Helper_Form_Element_Text('caidan', NULL, NULL, _t('侧栏菜单'), _t(''));
+    $form->addInput($caidan);
 }
 function themeFields($layout) {
-    $toutu2 = new Typecho_Widget_Helper_Form_Element_Text('toutu2', NULL, NULL, _t('首页头图'), _t(''));
+    $toutu2 = new Typecho_Widget_Helper_Form_Element_Text('toutu2', NULL, NULL, _t('首页图片'), _t(''));
     $layout->addItem($toutu2);
-    $toutu = new Typecho_Widget_Helper_Form_Element_Text('toutu', NULL, NULL, _t('文章头图'), _t(''));
+    $toutu = new Typecho_Widget_Helper_Form_Element_Text('toutu', NULL, NULL, _t('文章页图片'), _t(''));
     $layout->addItem($toutu);
-	$guanjianci = new Typecho_Widget_Helper_Form_Element_Text('guanjianci', NULL, NULL, _t('关键词'), _t(''));
+	$guanjianci = new Typecho_Widget_Helper_Form_Element_Text('guanjianci', NULL, NULL, _t('SEO关键词'), _t(''));
     $layout->addItem($guanjianci);
-	$miaoshu = new Typecho_Widget_Helper_Form_Element_Text('miaoshu', NULL, NULL, _t('描述'), _t(''));
+	$miaoshu = new Typecho_Widget_Helper_Form_Element_Text('miaoshu', NULL, NULL, _t('SEO描述'), _t(''));
     $layout->addItem($miaoshu);
+    $xiaozi = new Typecho_Widget_Helper_Form_Element_Text('xiaozi', NULL, NULL, _t('独立页面小字'), _t(''));
+    $layout->addItem($xiaozi);
+    $datu = new Typecho_Widget_Helper_Form_Element_Text('datu', NULL, NULL, _t('独立页面图标'), _t(''));
+    $layout->addItem($datu);
 }
 function blblget($url) {
     $options = Typecho_Widget::widget('Widget_Options');
